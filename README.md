@@ -3,7 +3,7 @@ Sistema de Evaluación de Alternativas Económicas (SEAE)
 ## Descripción
 Backend del Sistema de Evaluación de Alternativas Económicas (SEAE),  
 desarrollado con Spring Boot. Permite evaluar alternativas de inversión  
-mediante los métodos de Ingeniería Económica: VPN, CAE y TIR.
+mediante los métodos: VPN, CAE y TIR.
 
 ---
 
