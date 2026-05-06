@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEAE - Sistema de Evaluación Económica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo">SEAE</div>
+        <div class="nav-title">Ingeniería en Desarrollo de Software</div>
+    </nav>
+
+    <main class="dashboard">
+        <section class="card input-section">
+            <h2><i class="icon">📊</i> Datos del Proyecto</h2>
+            <form id="finance-form">
+                <div class="grid-inputs">
+                    <div class="form-group">
+                        <label>Tasa de Descuento (MARR) %</label>
+                        <input id="trema" type="number" step="0.01" placeholder="Ej: 15" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Vida del Proyecto (Años)</label>
+                        <input type="number" placeholder="Ej: 5" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Costo Inicial ($)</label>
+                        <input id="inversion" type="number" placeholder="Ej: 5000" required>
+                    </div>
+                </div>
+
+                <h3>Flujos de Efectivo Anuales</h3>
+                <div id="flows-container" class="flows-list">
+                    <div class="flow-input">
+                        <span>Año 1:</span>
+                        <input type="number" placeholder="Monto">
+                    </div>
+                </div>
+                
+                <div class="actions">
+                    <button type="button" class="btn btn-secondary">Añadir Año</button>
+                    <button type="button" id="btn-calcular" class="btn btn-primary">Calcular</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="results-container">
+            <div class="card result-card primary">
+                <h4>VPN</h4>
+                <p id="res-vpn">$0.00</p>
+            </div>
+            <div class="card result-card">
+                <h4>CAE</h4>
+                <p id="res-cae">$0.00</p>
+            </div>
+            <div class="card result-card">
+                <h4>TIR</h4>
+                <p id="res-tir">0%</p>
+            </div>
+        </section>
+
+    <div class="comparison-grid">
+    <div class="alt-column">
+        <h5>Alternativa A</h5>
+        <p id="vpn-a">$0.00</p>
+        <div id="estado-a" class="status">---</div>
+    </div>
+    <div class="alt-column">
+        <h5>Alternativa B</h5>
+        <p id="vpn-b">$0.00</p>
+        <div id="estado-b" class="status">---</div>
+    </div>
+</div>
+                <div class="final-actions">
+                    <button class="btn btn-compare">Comparar Alternativas</button>
+                    <button id="btn-reporte" class="btn btn-pdf">Descargar Reporte PDF</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
