@@ -1,0 +1,111 @@
+:root {
+    --primary: #003366; /* Azul formal */
+    --secondary: #6c757d;
+    --success: #28a745;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    color: var(--dark);
+}
+
+/* Navbar */
+.navbar {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; letter-spacing: 2px; }
+
+/* Dashboard Layout */
+.dashboard {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* Inputs Grid */
+.grid-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Resultados Estilizados */
+.results-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.result-card {
+    text-align: center;
+    border-top: 5px solid var(--secondary);
+}
+
+.result-card.primary { border-top-color: var(--primary); }
+.result-card p { font-size: 1.8rem; font-weight: bold; margin: 0.5rem 0; }
+
+/* Botones */
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.btn:active { transform: scale(0.95); }
+
+.btn-primary { background: var(--primary); color: white; }
+.btn-compare { background: var(--success); color: white; margin-right: 10px; }
+.btn-pdf { background: #e74c3c; color: white; } /* Color PDF rojo */
+
+/* Status Indicators */
+.status {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+.positive { background: #d4edda; color: var(--success); }
+.negative { background: #f8d7da; color: var(--danger); }
